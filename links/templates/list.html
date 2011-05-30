@@ -1,0 +1,18 @@
+{% extends "application.html" %}
+{% block content %}
+{% if links %}
+  <ul>
+    {% for link in links %}
+    <li>
+      <h2>{{ link.title }}</h2>
+      <p>{{ link.desc }}</p>
+      <a href="{{ link.url }}">{{ link.url }}</a><br/>
+      <a href="/links/{{ link.id }}/">Show</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Nothing to show</p>
+{% endif %}
+<a href="new">Add a new link</a>
+{% endblock %}

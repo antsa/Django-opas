@@ -1,0 +1,12 @@
+{% extends "application.html" %}
+{% block content %}
+  <form action="/links/{{ action }}/" method="post">
+    <label for="title">Title:</label>
+    <input name="title" id="title" value="{{ link.title }}">
+    <label for="desc">Description:</label>
+    <input name="desc" id="desc" value="{{ link.desc }}">
+    <label for="url">URL</label>
+    <input name="url" id="url" value="{{ link.url }}">
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

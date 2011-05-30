@@ -1,0 +1,13 @@
+{% extends "application.html" %}
+{% block content %}
+{% if link %}
+  <h2>{{ link.title }}</h2>
+  <p>{{ link.desc }}</p>
+  <a href="{{ link.url }}">{{ link.url }}</a>
+  <a href="edit">Edit</a>
+  <a href="delete">Delete</a>
+  <a href="/links/"><< Back</a>  
+{% else %}
+  <p>Nothing to show</p>
+{% endif %}
+{% endblock %}
