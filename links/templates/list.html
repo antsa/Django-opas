@@ -7,12 +7,12 @@
       <h2>{{ link.title }}</h2>
       <p>{{ link.desc }}</p>
       <a href="{{ link.url }}">{{ link.url }}</a><br/>
-      <a href="/links/{{ link.id }}/">Show</a>
+      <a class="button" href="/links/{{ link.id }}/">Show</a>
     </li>
     {% endfor %}
   </ul>
 {% else %}
   <p>Nothing to show</p>
 {% endif %}
-<a href="new">Add a new link</a>
+<a class="button" href="new">Add a new link</a>
 {% endblock %}
